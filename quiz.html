@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Retro Center - Retro Quiz</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body style="background: url(bgvideo.webp) !important">
+    <!-- Navbar -->
+    <table class="navbar">
+      <tr>
+        <td><a href="index.html">Home</a></td>
+        <td><a href="awards.html">Awards</a></td>
+        <td><a href="quiz.html">Retro Quiz</a></td>
+      </tr>
+    </table>
+
+    <!-- Page Title -->
+    <h1 class="page-title">Retro Quiz - Under Construction!</h1>
+    <div class="container">
+      <div class="left-section">
+        <h3>Now Playing:</h3>
+        <button id="playButton">▶ Play</button>
+        <audio id="audio">
+          <source src="imbad.mp3" type="audio/mpeg" />
+          Your browser does not support the audio element.
+        </audio>
+        <img src="kevin.webp" alt="Kevin" width="400" />
+      </div>
+      <!-- Under Construction GIFs -->
+      <div class="under-construction">
+        <img
+          src="underconstruction1.webp"
+          alt="Under Construction"
+          width="500"
+        />
+        <marquee style="color: white; font-weight: 900; font-size: 2rem"
+          >We're working hard to bring you the ultimate retro quiz!</marquee
+        >
+      </div>
+    </div>
+
+    <script>
+      const playButton = document.getElementById("playButton");
+      const audio = document.getElementById("audio");
+
+      playButton.addEventListener("click", () => {
+        if (audio.paused) {
+          audio.play();
+          playButton.textContent = "⏸ Pause";
+        } else {
+          audio.pause();
+          playButton.textContent = "▶ Play";
+        }
+      });
+    </script>
+  </body>
+</html>

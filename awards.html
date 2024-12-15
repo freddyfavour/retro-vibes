@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Retro Center - Awards</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Nav -->
+    <table class="navbar">
+      <tr>
+        <td><a href="index.html">Home</a></td>
+        <td><a href="awards.html">Awards</a></td>
+        <td><a href="quiz.html">Retro Quiz</a></td>
+      </tr>
+    </table>
+
+    <h1 class="page-title">Retro Awards - Best of the 90s!</h1>
+    <marquee class="marquee" behavior="alternate" scrollamount="6">
+      Note: this was awarded after a proper one-man election😂
+    </marquee>
+
+    <!-- Awards Table -->
+    <div class="container">
+      <div class="left-section">
+        <h3>Now Playing:</h3>
+        <button id="playButton">▶ Play</button>
+        <audio id="audio">
+          <source src="imbad.mp3" type="audio/mpeg" />
+          Your browser does not support the audio element.
+        </audio>
+        <img src="kevin.webp" alt="Kevin" width="400" />
+      </div>
+      <table class="awards-table" style="box-shadow: 3px 3px 0.2px black">
+        <tr>
+          <th>Category</th>
+          <th>Winner</th>
+        </tr>
+        <tr>
+          <td>Best Movie</td>
+          <td>Home Alone</td>
+        </tr>
+        <tr>
+          <td>Best Song</td>
+          <td>I'm Bad - Michael Jackson</td>
+        </tr>
+        <tr>
+          <td>Best Website</td>
+          <td>GeoCities</td>
+        </tr>
+        <tr>
+          <td>Best Restaurant</td>
+          <td>Pizza Hut</td>
+        </tr>
+        <tr>
+          <td>Best Console</td>
+          <td>Super Nintendo</td>
+        </tr>
+        <tr>
+          <td>Best TV Show</td>
+          <td>Friends</td>
+        </tr>
+        <tr>
+          <td>Best Cartoon</td>
+          <td>Rugrats</td>
+        </tr>
+      </table>
+    </div>
+
+    <script>
+      const playButton = document.getElementById("playButton");
+      const audio = document.getElementById("audio");
+
+      playButton.addEventListener("click", () => {
+        if (audio.paused) {
+          audio.play();
+          playButton.textContent = "⏸ Pause";
+        } else {
+          audio.pause();
+          playButton.textContent = "▶ Play";
+        }
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Retro Center - Home</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <!-- Note that after checking this you might never stop thinking of it😂 -->
+  <body>
+    <!-- Navbar -->
+    <table class="navbar">
+      <tr>
+        <td><a href="index.html">Home</a></td>
+        <td><a href="awards.html">Awards</a></td>
+        <td><a href="quiz.html">Retro Quiz</a></td>
+      </tr>
+    </table>
+
+    <!-- Main Content -->
+    <div class="container">
+      <!-- Left Section - Audio Player -->
+      <div class="left-section">
+        <h3>Now Playing:</h3>
+        <button id="playButton">▶ Play</button>
+        <audio id="audio">
+          <source src="imbad.mp3" type="audio/mpeg" />
+          Your browser does not support the audio element.
+        </audio>
+        <img src="mj.webp" alt="Kevin" width="400" />
+      </div>
+
+      <!-- Right Section - Retro Content -->
+      <div class="right-section" style="box-shadow: 3px 3px 0.2px black">
+        <h1>Freddy's Retro Universe!</h1>
+        <p>
+          Whatya doing! Get over here! I’m Freddy, a lover of all things retro,
+          from movies and music to learnin new languages. Step into ma little
+          90s-inspired world where everythin sparkles with old-school charm
+        </p>
+        <img src="kevin.webp" alt="Retro Dance" width="400" />
+        <p style="color: lime; font-size: 20px; text-shadow: 2px 2px red">
+          Taking you back to the golden age of the 90s!
+        </p>
+      </div>
+    </div>
+
+    <!-- Scrolling Marquee ps: my favourite feature-->
+    <marquee
+      class="marquee"
+      behavior="scroll"
+      direction="left"
+      scrollamount="8"
+    >
+      🎉 Welcome to the Retro Center! 🎶 Enjoy the best vibes from the 90s! 🕹️✨
+    </marquee>
+
+    <!-- Visitor Counter -->
+    <div class="visitor-counter">
+      You are visitor #<span id="counter">005432</span>
+    </div>
+
+    <script>
+      alert("Remember to press the play button to go full retro");
+      const playButton = document.getElementById("playButton");
+      const audio = document.getElementById("audio");
+
+      playButton.addEventListener("click", () => {
+        if (audio.paused) {
+          audio.play();
+          playButton.textContent = "⏸ Pause";
+        } else {
+          audio.pause();
+          playButton.textContent = "▶ Play";
+        }
+      });
+    </script>
+  </body>
+</html>
